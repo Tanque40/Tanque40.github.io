@@ -12,34 +12,12 @@ class ParticlesContainer extends React.PureComponent {
 
     render() {
         const options = {
-            background: {
-                color: {
-                    value: "#1e1f26",
+            "background": {
+                "color": {
+                    "value": "#1e1f26",
                 },
             },
-            fpsLimit: 120,
-            interactivity: {
-                events: {
-                    onClick: {
-                        enable: true,
-                        mode: "push",
-                    },
-                    onHover: {
-                        enable: true,
-                        mode: "repulse",
-                    },
-                    resize: true,
-                },
-                modes: {
-                    push: {
-                        quantity: 4,
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                    },
-                },
-            },
+            "fpsLimit": 120,
             particles: {
                 color: {
                     value: "#f2f2f2",
@@ -78,11 +56,10 @@ class ParticlesContainer extends React.PureComponent {
                     value: { min: 1, max: 3 },
                 },
             },
-            detectRetina: true,
         }
 
         return (
-            <Particles options={options} init={this.customInit} />
+            <Particles init={this.customInit} />
 
         )
     }
